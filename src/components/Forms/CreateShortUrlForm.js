@@ -16,7 +16,7 @@ const CreateShortUrlForm = () => {
   const submitFormHandler = (event) => {
     event.preventDefault();
     sendRequest({
-      url: `${process.env.REACT_APP_BASE_URL}/shortlink`,
+      url: `${process.env.REACT_APP_BASE_URL}shortlink`,
       method: "POST",
       headers: {
         "Content-Type": "application/json"
