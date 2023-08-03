@@ -9,7 +9,7 @@ const CreateShortUrlForm = () => {
   const shortenurlCallback = useCallback((data) => {
     console.log(data);
     setShorturl(`http://localhost:5000/${data.short}`);
-  });
+  }, []);
 
   const { isLoading, error, sendRequest } = useHttp(shortenurlCallback);
 
