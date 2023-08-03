@@ -39,7 +39,7 @@ const CreateShortUrlForm = () => {
         onChange={inputOnChangeHandler}
         value={longurl}
       ></input>
-      {isLoading ? <p>Loading...</p> : <button type="submit" className={styles.button}>
+      {isLoading ? <p className={styles.isloading}>Loading...</p> : <button type="submit" className={styles.button}>
         Shorten!
       </button>}
       <input
