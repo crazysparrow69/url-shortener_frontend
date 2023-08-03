@@ -9,7 +9,7 @@ const CreateShortUrlForm = () => {
   const shortenurlCallback = useCallback((data) => {
     console.log(data);
     setShorturl(`http://localhost:5000/${data.short}`);
-  });
+  }, []);
 
   const { isLoading, error, sendRequest } = useHttp(shortenurlCallback);
 
@@ -39,7 +39,7 @@ const CreateShortUrlForm = () => {
         onChange={inputOnChangeHandler}
         value={longurl}
       ></input>
-      {isLoading ? <p>Loading...</p> : <button type="submit" className={styles.button}>
+      {isLoading ? <p className={styles.isloading}>Loading...</p> : <button type="submit" className={styles.button}>
         Shorten!
       </button>}
       <input
