@@ -1,8 +1,11 @@
+import Wrapper from "./components/UI/Wrapper";
+import Main from "./components/Main/Main";
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <Wrapper>
+      <Main />
+    </Wrapper>
   );
 }
 
