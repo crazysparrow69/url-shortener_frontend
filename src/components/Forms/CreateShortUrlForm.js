@@ -15,6 +15,7 @@ const CreateShortUrlForm = () => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
+    setShorturl("");
     sendRequest({
       url: "http://localhost:5000/shortlink",
       method: "POST",
