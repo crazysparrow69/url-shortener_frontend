@@ -16,7 +16,7 @@ const CreateShortUrlForm = () => {
   const submitFormHandler = (event) => {
     event.preventDefault();
     sendRequest({
-      url: "http://localhost:5000/shortlink",
+      url: `http:/localhost:5000/shortlink`,
       method: "POST",
       headers: {
         "Content-Type": "application/json"
