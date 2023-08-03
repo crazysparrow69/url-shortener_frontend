@@ -13,7 +13,6 @@ const useHttp = (applyData) => {
         const response = await fetch(requestConfig.url, {
           method: requestConfig.method || "GET",
           headers: requestConfig.headers || {},
-          mode: "no-cors",
           body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
         });
 
