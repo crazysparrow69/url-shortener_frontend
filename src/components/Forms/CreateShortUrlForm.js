@@ -8,7 +8,7 @@ const CreateShortUrlForm = () => {
 
   const shortenurlCallback = useCallback((data) => {
     console.log(data);
-    setShorturl(`${process.env.REACT_APP_BASE_URL}${data.short}`);
+    setShorturl(`http://localhost:5000/${data.short}`);
   }, []);
 
   const { isLoading, error, sendRequest } = useHttp(shortenurlCallback);
@@ -16,7 +16,7 @@ const CreateShortUrlForm = () => {
   const submitFormHandler = (event) => {
     event.preventDefault();
     sendRequest({
-      url: `${process.env.REACT_APP_BASE_URL}shortlink`,
+      url: "http://localhost:5000/shortlink",
       method: "POST",
       headers: {
         "Content-Type": "application/json"
